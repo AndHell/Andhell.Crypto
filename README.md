@@ -37,10 +37,10 @@ dotnet build
 ```cs
 // Create a Password object for the string
 var password = new Password("Correct Horse Battery Staple");
-// Hash the Pasword to get a storeable data
-ISecuredPassword storeablePassword = password.Storable();           
+// Hash the Pasword to get a storable data
+ISecuredPassword storablePassword = password.Storable();           
 // To Verify
-if (storeablePassword.Verify(password))
+if (storablePassword.Verify(password))
     Console.WriteLine("Password matched");
 ```
 
