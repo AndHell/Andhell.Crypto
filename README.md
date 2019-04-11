@@ -3,9 +3,9 @@ Cryptography Library with .NET Standard 2.0 and [libsodium](https://github.com/j
 ## What is this?
 This library aims to make the use of cryptography easier. To do so, this Project builds around libsodium, but, for example, hides every `byte[]` for a Key or a Hash inside a container class. To get an impression, see the [Examples](#examples) below.
 
-To make the entry even simpler, take a look at the ["By Usecase"](docu/By_UseCase.md) Documentation.
+To make the entry even simpler, take a look at the ["By Usecase"](docu/By_UseCase.md) documentation.
 
-If already know how to use cryptography and need more flexibility to build strong protocols, you are better off with using [libsodium](https://github.com/jedisct1/libsodium) (or another library) directly.
+If already know how to use cryptography and need more flexibility to build strong protocols, you are better of with using [libsodium](https://github.com/jedisct1/libsodium) (or another library) directly.
 
 ## Andhell.Crypto
 Implementation with [libsodium](https://github.com/jedisct1/libsodium).
@@ -37,10 +37,10 @@ dotnet build
 ```cs
 // Create a Password object for the string
 var password = new Password("Correct Horse Battery Staple");
-// Hash the Password to get a storable data
-ISecuredPassword storablePassword = password.Storable();           
+// Hash the Pasword to get a storeable data
+ISecuredPassword storeablePassword = password.Storable();           
 // To Verify
-if (storablePassword.Verify(password))
+if (storeablePassword.Verify(password))
     Console.WriteLine("Password matched");
 ```
 
@@ -56,7 +56,7 @@ if (result.Verify(MESSAGE))
     Console.WriteLine("Hash matched!");
 ```
 
-### Encrypt and Decrypt Text with a Symmetric  Key
+### Encrypt and Decrypt Text with a Symmetric Key
 ```cs
 var MESSAGE = "eine kuh macht muh, viele kühe machen mühe"
 // Create a new Symmetric Key
